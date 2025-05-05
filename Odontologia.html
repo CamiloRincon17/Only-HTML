@@ -1,23 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades Más Visitadas</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        form {
+            display: grid;
+            gap: 12px;
+            max-width: 500px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        .rating {
+            display: inline-flex;
+            gap: 5px;
+        }
+        img.thumbnail {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fuck the cops</h1>
-    <ol>
-        <li>lista</li>
-    </ol>    
-   <a href="enlace_1.html">Primer enlace</a>
-    <a href="https://www.youtube.com/watch?v=JXOkfd_O8hE&t=1s" target="_blank">youtube</a>
-    <img src="img/attakoftitan.avif" alt="la puta madre">
-    <form >
-        <input type="checkbox"  required>
-        <input type="submit" value="Envialo" required>    
-        <input type="radio" required>
-        <input type="date" required>
-        <input type="text" placeholder="Name" name="UserName">
-        <input type="text" placeholder="ingrese name">
-    </form>
+    <header>
+        <h1>Ciudades Más Visitadas en el Mundo</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th>País</th>
+                    <th>Ciudad</th>
+                    <th>Visitantes anuales</th>
+                    <th>Atracciones principales</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Francia</td>
+                    <td>París</td>
+                    <td>19.1 millones</td>
+                    <td>Torre Eiffel, Louvre, Notre-Dame</td>
+                    <td><img src="https://via.placeholder.com/100x75?text=Paris" alt="París" class="thumbnail"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Emiratos Árabes</td>
+                    <td>Dubái</td>
+                    <td>15.9 millones</td>
+                    <td>Burj Khalifa, Dubai Mall, Palmeras</td>
+                    <td><img src="https://via.placeholder.com/100x75?text=Dubai" alt="Dubái" class="thumbnail"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section>
+            <h2>Formulario de preferencias</h2>
+            <form action="#" method="post">
+                <label>
+                    Nombre:
+                    <input type="text" name="nombre" required>
+                </label>
+                
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                
+                <label>
+                    Edad:
+                    <input type="number" name="edad" min="12" max="99">
+                </label>
+                
+                <fieldset>
+                    <legend>Selección de ciudad</legend>
+                    <label>
+                        Ciudad favorita:
+                        <select name="ciudad" required>
+                            <option value="">-- Seleccione --</option>
+                            <option value="paris">París</option>
+                            <option value="dubai">Dubái</option>
+                            <option value="madrid">Madrid</option>
+                        </select>
+                    </label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Valoración</legend>
+                    <span class="rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                    </span>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <label><input type="checkbox" name="intereses" value="cultural"> Turismo cultural</label>
+                    <label><input type="checkbox" name="intereses" value="gastronomia"> Gastronomía</label>
+                    <label><input type="checkbox" name="intereses" value="naturaleza"> Naturaleza</label>
+                </fieldset>
+                
+                <label>
+                    ¿Qué te gusta de esta ciudad?
+                    <textarea name="comentarios" rows="4"></textarea>
+                </label>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Ciudades Más Visitadas | Datos actualizados en 2023</p>
+    </footer>
 </body>
 </html>

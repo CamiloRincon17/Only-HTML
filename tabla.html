@@ -11,67 +11,126 @@
         <tr>
             <th>País</th>
             <th>Ciudades</th>
+            <th>Imagen</th>
             <th>ranking</th>
     
         </tr>
         <tr>
             <td>Francia</td>
             <td>Paris</td>
+            <th ><img src="https://assets.vogue.in/photos/667922097830445356ea2be9/3:4/w_2560%2Cc_limit/Paris.jpg" alt=""></th>
             <td>1</td>
         </tr>
         <tr>
             <td>Emiratos Árabes Unidos</td>
             <td>Dubái</td>
-            <td>2</td>
+           <th><img src="https://media.staticontent.com/media/pictures/08223d5a-e691-4b1b-9e90-5d3008b09335" alt=""></th>
         </tr>
         <tr>
             <td>España</td>
             <td>Madrid</td>
+            <th><img src="https://www.barcelo.com/guia-turismo/wp-content/uploads/que-visitar-en-madrid.jpg" alt=""></th>
             <td>3</td>
         </tr>
         <tr>
             <td>Japon</td>
             <td>Tokio</td>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiDoPAzpD-c3vn68GSPlkcFor6yohEiKd6Tg&s" alt=""></th>
             <td>4</td>
         </tr>
         <tr>
             <td>Países Bajos</td>
             <td>Amsterdam</td>
+            <th><img src="https://images.adsttc.com/media/images/6178/35dd/ef29/ba01/6561/6535/newsletter/gaurav-jain-2k2sr19rlg8-unsplash.jpg?1635268077" alt=""></th>
             <td>5</td>
         </tr>
         <tr>
             <td>Alemania</td>
             <td>Berlín</td>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9VQ1LGdTBBKYKpuFqTJ5NOr1348gFB2eiw&s" alt=""></th>
             <td>6</td>
         </tr>
         <tr>
             <td>Italia</td>
             <td>Roma</td>
+            <th><img src="https://tourismmedia.italia.it/is/image/mitur/20220127150143-colosseo-roma-lazio-shutterstock-756032350-2?wid=1600&hei=900&fit=constrain,1&fmt=webp" alt=""></th>
             <td>7</td>
         </tr>
     
         <tr>
             <td>Usa</td>
             <td>New york</td>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8hue5EMkHV58Z-kjiD-v_En2eCb-oAsZYQ&s" alt=""></th>
             <td>8</td>
         </tr>
         <tr>
             <td>España</td>
             <td>Barcelona</td>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy0tvSv66-5ztyy57QDCH7xO9M9VL9HGEG8Q&s" alt=""></th>
             <td>9</td>
         </tr>
         <tr>
             <td>Uk</td>
             <td>Londres</td>
+            <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZfMSGi42ruPL4uuDAfoe09Mq5LsPYi9DMcQ&s" alt=""></th>
             <td>10</td>
         </tr>
      </table>
-<h2>Responder el formulario</h2>
-<form action="none" method="post">
-    <input type="text" name="Nombre" placeholder="Nombre" required>
-    <input type="text" placeholder="Que ciudad le gusta mas de las 10" required>
-    <input type="submit" value="Enviar">
-<textarea name="Comentario" id="" placeholder="escribe que te gusta de esa ciudad"></textarea>
+     <section>
+        <h2>Formulario de preferencias</h2>
+        <form action="#" method="post">
+            <label>
+                Nombre:
+                <input type="text" name="nombre" required>
+            </label>
+            
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            
+            <label>
+                Edad:
+                <input type="number" name="edad" min="12" max="99">
+            </label>
+            
+            <h3>Selección de ciudad</h3>
+                <label>
+                    Ciudad favorita:
+                    <select name="ciudad" required>
+                        <option value="">-- Seleccione --</option>
+                        <option value="paris">París</option>
+                        <option value="dubai">Dubái</option>
+                        <option value="madrid">Madrid</option>
+                    </select>
+                </label>
+          
+            
+           
+                <h3>Valoración</h3>
+                <span class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </span>
+           
+           
+                <h3>Intereses</h3>
+                <label><input type="checkbox" name="intereses" value="cultural"> Turismo cultural</label>
+                <label><input type="checkbox" name="intereses" value="gastronomia"> Gastronomía</label>
+                <label><input type="checkbox" name="intereses" value="naturaleza"> Naturaleza</label>
+            
+            
+            <label>
+                ¿Qué te gusta de esta ciudad?
+                <textarea name="comentarios" rows="4"></textarea>
+            </label>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 </form>
 </body>
 <footer>

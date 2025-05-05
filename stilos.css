@@ -6,3 +6,7 @@ table,th,td{
 form{
     width: 100%;
 }
+img{
+    height: 250px;
+    width: 250px;
+}
